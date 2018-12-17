@@ -456,6 +456,7 @@ function signup(req, res,next){
 }
 
 function carModelList(req, res,next){  
+  console.log('car-model-list');
   CarModel.find({
     is_deleted: 0,
     is_active:1
@@ -2269,6 +2270,7 @@ function driverFeedbackList(req, res,next){
 }
 
 function sendNotification(req, res,next){  
+  console.log('sendNotification');
   var device_id 	= (typeof req.query.device_id !== 'undefined' && req.query.device_id !== null) ? req.query.device_id : '';
   var device_type 	= (typeof req.query.device_type !== 'undefined' && req.query.device_type !== null) ? req.query.device_type : '';
   console.log(device_id)
